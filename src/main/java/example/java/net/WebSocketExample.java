@@ -10,11 +10,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class WebSocketExample {
 
-	static Logger logger = Logger.getLogger(WebSocketExample.class.getName());
+	static Logger logger = LogManager.getLogger(WebSocketExample.class.getName());
 
     static ExecutorService executor = Executors.newFixedThreadPool(3, new ThreadFactory() {
 

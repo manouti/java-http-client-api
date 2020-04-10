@@ -16,11 +16,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Http2ClientExample {
 
-	static Logger logger = Logger.getLogger(Http2ClientExample.class.getName());
+	static Logger logger = LogManager.getLogger(Http2ClientExample.class.getName());
 
     static ExecutorService executor = Executors.newFixedThreadPool(6, new ThreadFactory() {
 		

@@ -22,11 +22,12 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
 import java.util.function.Function;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Http2PushExample {
 
-	static Logger logger = Logger.getLogger(Http2PushExample.class.getName());
+	static Logger logger = LogManager.getLogger(Http2PushExample.class.getName());
 
     static ExecutorService executor = Executors.newFixedThreadPool(20, new ThreadFactory() {
 		
